@@ -2,8 +2,8 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
 
-  protect_from_forgery with: :exception
-  helper_method :current_user, :logged_in?
+  protect_from_forgery with: :null_session
+  helper_method :log_in, :current_user, :logged_in?, :log_out
 
   # Authentication methods
   def log_in(user)
@@ -39,6 +39,7 @@ class ApplicationController < ActionController::Base
     auth_token = ENV['TWILIO_TOKEN']
 
     # set up a client to talk to the Twilio REST API
+    #binding.pry
     @client = Twilio::REST::Client.new account_sid, auth_token
 
     @client.account.messages.create({

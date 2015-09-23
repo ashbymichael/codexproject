@@ -9,15 +9,16 @@
 <hr>
 <br>
 <h2>Email Subscriptions</h2>
-<form method="post" action="/plans/email">
+<form method="get" action="/plans/email">
   Subscribe to email alerts for a Github topic:
-  Enter your email address: <input type='textfield' name='to'><br>
+  Enter your email address: <input type='textfield' name='email'><br>
   Enter the topic you want to be notified about: <input type='textfield' name='from'><br>
   What time would you like email notifications? <br>
   Enter email title: <input type='textfield' name='subject'><br>
   Enter email text: <input type='textfield' name='body' value='email body'><br>
   <input type='submit'>
 </form>
+
 
 <form>
 Sign up for our mailing list!
@@ -29,3 +30,5 @@ Sign up for our mailing list!
 Sign up for our SendGrid mailing list:
 </div>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://s3.amazonaws.com/subscription-cdn/0.2/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'sendgrid-subscription-widget-js');</script>
+
+
