@@ -15,6 +15,11 @@
  *= require_self
  */
 
+ footer {
+  position: relative;
+  text-align: center;
+ }
+
  .home-image {
     border: 0px;
     width: 100%;
@@ -22,5 +27,15 @@
  }
 
  .body {
-  padding: 4%;
+  padding: 4% 10%;
+ }
+
+
+ .card-content h2 {
+   margin-bottom: 0;
+ }
+
+ #current_cards_box{
+  position: relative;
+  background-color: black;
  }
